@@ -33,7 +33,7 @@ def start():
                              'cookie': cookie, 'referer': referer, 'origin': origin, 'user-agent': useragent})
     # --------------------------------------------------------------------------------------------------------#
         time = state.json()['data']['leftDays']
-        time = time.split('.')[0]
+        time = str(time).split('.')[0]
         email = state.json()['data']['email']
         if 'message' in checkin.text:
             mess = checkin.json()['message']
